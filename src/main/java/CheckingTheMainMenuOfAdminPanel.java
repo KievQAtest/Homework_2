@@ -28,18 +28,18 @@ public class CheckingTheMainMenuOfAdminPanel {
         // Первый вариант решения задачи - через использования масива и цикла
 
         String[] TabID = {  "//li[@data-submenu = '1']/a[@class = 'title']",
-                "//li[@data-submenu = '3']/a[@class = 'title has_submenu']",
-                "//li[@data-submenu = '9']/a[@class = 'title has_submenu']",
-                "//li[@data-submenu = '23']/a[@class = 'link']",
-                "//li[@data-submenu = '27']/a[@class = 'title has_submenu']",
-                "//li[@data-submenu = '31']/a[@class = 'title ']",
-                "//li[@data-submenu = '42']/a[@class = 'title has_submenu']",
-                "//li[@data-submenu = '46']/a[@class = 'link']",
-                "//li[@data-submenu = '52']/a[@class = 'title has_submenu']",
-                "//li[@data-submenu = '55']/a[@class = 'title has_submenu']",
-                "//li[@data-submenu = '58']/a[@class = 'title has_submenu']",
-                "//li[@data-submenu = '73']/a[@class = 'title has_submenu']",
-                "//li[@data-submenu = '95']/a[@class = 'title has_submenu']",
+                            "//li[@data-submenu = '3']/a[@class = 'title has_submenu']",
+                            "//li[@data-submenu = '9']/a[@class = 'title has_submenu']",
+                            "//li[@data-submenu = '23']/a[@class = 'link']",
+                            "//li[@data-submenu = '27']/a[@class = 'title has_submenu']",
+                            "//li[@data-submenu = '31']/a[@class = 'title ']",
+                            "//li[@data-submenu = '42']/a[@class = 'title has_submenu']",
+                            "//li[@data-submenu = '46']/a[@class = 'link']",
+                            "//li[@data-submenu = '52']/a[@class = 'title has_submenu']",
+                            "//li[@data-submenu = '55']/a[@class = 'title has_submenu']",
+                            "//li[@data-submenu = '58']/a[@class = 'title has_submenu']",
+                            "//li[@data-submenu = '73']/a[@class = 'title has_submenu']",
+                            "//li[@data-submenu = '95']/a[@class = 'title has_submenu']",
         };
 
         String[] TitleName = {  "Пульт",
@@ -70,12 +70,12 @@ public class CheckingTheMainMenuOfAdminPanel {
         chromeDriver.quit();
     }
 }
-
+        /*
         //Второй вариант - писать отдельно код для проверки каждого елемента
 
-        /*
+
         //dashboardTab
-        WebElement dashboardTab = chromeDriver.findElement(By.xpath("//li[@data-submenu = '1']/a[@class = 'title']"));
+        WebElement dashboardTab = chromeDriver.findElement(By.id("tab-AdminDashboard"));
         dashboardTab.click();
         WebElement dashboardTitle = chromeDriver.findElement(By.tagName("h2"));
         System.out.println(dashboardTitle.getText());
@@ -85,7 +85,7 @@ public class CheckingTheMainMenuOfAdminPanel {
             System.out.println("Ошибка, не тот раздел!!!");
         }
         //ordersTab
-        WebElement ordersTab = chromeDriver.findElement(By.xpath("//li[@data-submenu = '3']/a[@class = 'title has_submenu']"));
+        WebElement ordersTab = chromeDriver.findElement(By.id("subtab-AdminParentOrders"));
         ordersTab.click();
         WebElement ordersTabTitle = chromeDriver.findElement(By.tagName("h2"));
         System.out.println(ordersTabTitle.getText());
@@ -96,7 +96,7 @@ public class CheckingTheMainMenuOfAdminPanel {
         }
 
         //catalogTab
-        WebElement catalogTab = chromeDriver.findElement(By.xpath("//li[@data-submenu = '9']/a[@class = 'title has_submenu']"));
+        WebElement catalogTab = chromeDriver.findElement(By.id("subtab-AdminCatalog"));
         catalogTab.click();
         WebElement catalogTabTitle = chromeDriver.findElement(By.tagName("h2"));
         System.out.println(catalogTabTitle.getText());
@@ -118,7 +118,7 @@ public class CheckingTheMainMenuOfAdminPanel {
         }
 
         //supportServiceTab
-        WebElement supportServiceTab = chromeDriver.findElement(By.xpath("//li[@data-submenu = '27']/a[@class = 'title has_submenu']"));
+        WebElement supportServiceTab = chromeDriver.findElement(By.id("subtab-AdminParentCustomerThreads"));
         supportServiceTab.click();
         WebElement supportServiceTabTitle = chromeDriver.findElement(By.tagName("h2"));
         System.out.println(supportServiceTabTitle.getText());
@@ -129,7 +129,7 @@ public class CheckingTheMainMenuOfAdminPanel {
         }
 
         //statisticsTab
-        WebElement statisticsTab = chromeDriver.findElement(By.xpath("//li[@data-submenu = '31']/a[@class = 'title ']"));
+        WebElement statisticsTab = chromeDriver.findElement(By.id("subtab-AdminStats"));
         statisticsTab.click();
         WebElement statisticsTabTitle = chromeDriver.findElement(By.tagName("h2"));
         System.out.println(statisticsTabTitle.getText());
@@ -139,7 +139,7 @@ public class CheckingTheMainMenuOfAdminPanel {
             System.out.println("Ошибка, не тот раздел!!!");
         }
         //modulesTab
-        WebElement modulesTab = chromeDriver.findElement(By.xpath("//li[@data-submenu = '42']/a[@class = 'title has_submenu']"));
+        WebElement modulesTab = chromeDriver.findElement(By.id("subtab-AdminParentModulesSf"));
         modulesTab.click();
         WebElement modulesTabTitle = chromeDriver.findElement(By.tagName("h2"));
         System.out.println(modulesTabTitle.getText());
@@ -161,7 +161,7 @@ public class CheckingTheMainMenuOfAdminPanel {
         }
 
         //deliveryTab
-        WebElement deliveryTab = chromeDriver.findElement(By.xpath("//li[@data-submenu = '52']/a[@class = 'title has_submenu']"));
+        WebElement deliveryTab = chromeDriver.findElement(By.id("subtab-AdminParentShipping"));
         deliveryTab.click();
         WebElement deliveryTabTitle = chromeDriver.findElement(By.tagName("h2"));
         System.out.println(deliveryTabTitle.getText());
@@ -172,7 +172,7 @@ public class CheckingTheMainMenuOfAdminPanel {
         }
 
         //paymentMethodTab
-        WebElement paymentMethodTab = chromeDriver.findElement(By.xpath("//li[@data-submenu = '55']/a[@class = 'title has_submenu']"));
+        WebElement paymentMethodTab = chromeDriver.findElement(By.id("subtab-AdminParentPayment"));
         paymentMethodTab.click();
         WebElement paymentMethodTabTitle = chromeDriver.findElement(By.tagName("h2"));
         System.out.println(paymentMethodTabTitle.getText());
@@ -182,7 +182,7 @@ public class CheckingTheMainMenuOfAdminPanel {
             System.out.println("Ошибка, не тот раздел!!!");
         }
         //internationalTab
-        WebElement internationalTab = chromeDriver.findElement(By.xpath("//li[@data-submenu = '58']/a[@class = 'title has_submenu']"));
+        WebElement internationalTab = chromeDriver.findElement(By.id("subtab-AdminInternational"));
         internationalTab.click();
         WebElement internationalTabTitle = chromeDriver.findElement(By.tagName("h2"));
         System.out.println(internationalTabTitle.getText());
@@ -193,7 +193,7 @@ public class CheckingTheMainMenuOfAdminPanel {
         }
 
         //shopParametersTab
-        WebElement shopParametersTab = chromeDriver.findElement(By.xpath("//li[@data-submenu = '73']/a[@class = 'title has_submenu']"));
+        WebElement shopParametersTab = chromeDriver.findElement(By.id("subtab-ShopParameters"));
         shopParametersTab.click();
         WebElement shopParametersTabTitle = chromeDriver.findElement(By.tagName("h2"));
         System.out.println(shopParametersTabTitle.getText());
@@ -204,7 +204,7 @@ public class CheckingTheMainMenuOfAdminPanel {
         }
 
         //configurationTab
-        WebElement configurationTab = chromeDriver.findElement(By.xpath("//li[@data-submenu = '95']/a[@class = 'title has_submenu']"));
+        WebElement configurationTab = chromeDriver.findElement(By.id("subtab-AdminAdvancedParameters"));
         configurationTab.click();
         WebElement configurationTabTitle = chromeDriver.findElement(By.tagName("h2"));
         System.out.println(configurationTabTitle.getText());
@@ -216,7 +216,7 @@ public class CheckingTheMainMenuOfAdminPanel {
         chromeDriver.quit();
       }
   }
-        */
+*/
         // Конечно же лучшим вариантом решения этой задачи - использование паттерна Page Object
 
 

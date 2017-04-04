@@ -25,8 +25,8 @@ public class LoginInAdminPanel {
         entranceButton.click();
 
         WebDriverWait wait = new WebDriverWait(chromeDriver, 10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img [@width = '32' ]")));
-        WebElement Pictograph = chromeDriver.findElement(By.xpath("//img [@width = '32' ]"));
+        wait.until(ExpectedConditions.elementToBeClickable(By.className("employee_avatar_small")));
+        WebElement Pictograph = chromeDriver.findElement(By.className("employee_avatar_small"));
         Pictograph.click();
         WebElement entranceTab = chromeDriver.findElement(By.id("header_logout"));
         entranceTab.click();
