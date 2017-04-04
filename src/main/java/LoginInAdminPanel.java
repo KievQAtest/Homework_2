@@ -13,7 +13,7 @@ import java.util.List;
 public class LoginInAdminPanel {
     public static void main (String[] args) {
 
-        System.getProperty("driver.chrome");
+        System.setProperty("webdriver.chrome.driver", ".idea/driver/chromedriver.exe");
         WebDriver chromeDriver = new ChromeDriver();
         chromeDriver.manage().window().maximize();
         chromeDriver.get(" http://prestashop-automation.qatestlab.com.ua/admin147ajyvk0/");
